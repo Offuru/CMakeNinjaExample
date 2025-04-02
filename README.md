@@ -101,7 +101,7 @@ cmake -G "Ninja" -D CMAKE_CXX_COMPILER=g++  -D CMAKE_C_COMPILER=cc -D DLL_VERSIO
 
 After compiling everything, we can easily change the dll version we want to use by copying the coressponding dll file from `kits` to the directory where `my_app.exe` is located, since we just changed the dll implementation, not the lib or header files. This is useful especially when releasing a new version that don't change the header or lib files, since we don't need to recompile the project from scratch, we can just change the dll file and it will be used at runtime.
 
-General DLL notions:
+## General DLL notions:
 
 Most 3rd party tools (for example GUI libraries) will provide prebuilt binaries (`.dll` and `.lib` or `.a` files that the user can link to directly) as well as the source code (in case the user wants customize the library compilation for they use).  
 In order to use different libraries in your code the compiler will need to know where to find them and how to use them. Libraries are usually provided as zip folders containing 3 or 4 main directories, `include`, `lib`, `bin` and `src` (if the source code is provided).  
