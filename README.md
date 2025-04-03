@@ -57,7 +57,7 @@ cd build
 Run CMake and set the generator to Ninja, the C++ compiler path macro to g++, the C compiler path macro to cc and specify the location of `CMakeLists.txt` (in our case the parent directory). Note that we can write g++ and cc directly because we added ucrt64/bin to the path variable, so the system has access to `g++.exe` and `cc.exe`
 
 ```cmd
-cmake -G "Ninja" -D CMAKE_CXX_COMPILER=g++  -D CMAKE_C_COMPILER=cc -D ..
+cmake -G "Ninja" -D CMAKE_CXX_COMPILER=g++ -D CMAKE_C_COMPILER=cc ..
 ```
 
 This generates the files that Ninja needs to compile our dll as well as a `kits` directory we specified in `CMakeLists.txt`. We can now build the dll by running
@@ -81,7 +81,7 @@ mkdir build
 cd build
 ```
 ```cmd
-cmake -G "Ninja" -D CMAKE_CXX_COMPILER=g++  -D CMAKE_C_COMPILER=cc -D ..
+cmake -G "Ninja" -D CMAKE_CXX_COMPILER=g++ -D CMAKE_C_COMPILER=cc ..
 ```
 ```cmd
 ninja
